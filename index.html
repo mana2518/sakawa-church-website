@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>佐川教会</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Hiragino Kaku Gothic ProN', 'Hiragino Sans', 'Yu Gothic', 'Meiryo', sans-serif;
+            line-height: 1.8;
+            color: #4a4a4a;
+            background-color: #fefefe;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        header {
+            background: linear-gradient(135deg, #8b4513 0%, #d2691e 100%);
+            color: #fff;
+            padding: 1.5rem 0;
+            text-align: center;
+            box-shadow: 0 2px 10px rgba(139, 69, 19, 0.3);
+        }
+        
+        header .denomination {
+            font-size: 1.4rem;
+            margin-bottom: 0.3rem;
+            font-weight: 300;
+            opacity: 0.9;
+        }
+        
+        header h1 {
+            font-size: 3.2rem;
+            margin-bottom: 1rem;
+            font-weight: 400;
+            letter-spacing: 2px;
+            text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
+        }
+        
+        .church-photo {
+            background: linear-gradient(to bottom, #fff5ee, #f5f5dc);
+            padding: 2rem 0;
+            text-align: center;
+        }
+        
+        .church-photo img {
+            max-width: 90%;
+            height: 350px;
+            object-fit: cover;
+            border-radius: 20px;
+            margin-bottom: 1.5rem;
+            border: 3px solid #daa520;
+        }
+        
+        .welcome-message {
+            background: #fff8f0;
+            padding: 3rem 0;
+            text-align: center;
+        }
+        
+        .welcome-message h2 {
+            font-size: 2.2rem;
+            margin-bottom: 1.5rem;
+            color: #8b4513;
+            font-weight: 300;
+        }
+        
+        .welcome-message p {
+            font-size: 1.3rem;
+            color: #6b4423;
+            max-width: 650px;
+            margin: 0 auto;
+            line-height: 2;
+        }
+        
+        .content {
+            padding: 4rem 0;
+        }
+        
+        .section {
+            margin-bottom: 4rem;
+        }
+        
+        .section h3 {
+            font-size: 2rem;
+            margin-bottom: 2rem;
+            color: #8b4513;
+            border-bottom: 3px solid #daa520;
+            padding-bottom: 0.8rem;
+            font-weight: 300;
+            text-align: center;
+        }
+        
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        
+        .info-card {
+            background: #fffef7;
+            padding: 2.5rem;
+            border-radius: 15px;
+            border: 2px solid #daa520;
+        }
+        
+        .info-card h4 {
+            color: #8b4513;
+            margin-bottom: 1.2rem;
+            font-size: 1.4rem;
+            font-weight: 400;
+        }
+        
+        .info-card p {
+            margin-bottom: 0.5rem;
+        }
+        
+        .worship-times {
+            background: linear-gradient(135deg, #fff8dc, #f5f5dc);
+            padding: 2.5rem;
+            border-radius: 15px;
+            margin: 2rem 0;
+            border: 2px solid #daa520;
+        }
+        
+        .worship-times h4 {
+            color: #8b4513;
+            margin-bottom: 1.5rem;
+            font-size: 1.6rem;
+            font-weight: 400;
+            text-align: center;
+        }
+        
+        .worship-time {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1.2rem;
+            background: #fffef7;
+            margin: 0.8rem 0;
+            border-radius: 10px;
+            border: 1px solid #daa520;
+        }
+        
+        footer {
+            background: linear-gradient(135deg, #8b4513 0%, #d2691e 100%);
+            color: white;
+            text-align: center;
+            padding: 2.5rem 0;
+        }
+        
+        .contact-info {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+        
+        .contact-item {
+            text-align: left;
+        }
+        
+        .contact-item strong {
+            display: block;
+            margin-bottom: 0.8rem;
+            color: #daa520;
+            font-size: 1.1rem;
+        }
+        
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2rem;
+            }
+            
+            .hero h2 {
+                font-size: 1.5rem;
+            }
+            
+            .hero img {
+                height: 250px;
+            }
+            
+            .worship-time {
+                flex-direction: column;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="denomination">日本基督教団</div>
+            <h1>佐川教会</h1>
+        </div>
+    </header>
+
+    <section class="church-photo">
+        <div class="container">
+            <img src="./sakawa.avif" alt="佐川教会外観" onerror="this.style.display='none'">
+            <p style="text-align: center; margin-top: 1.5rem; font-size: 1.2rem; color: #8b4513;">日本キリスト教団に属すプロテスタントの教会です</p>
+        </div>
+    </section>
+
+    <main class="content">
+        <div class="container">
+            <section class="section">
+                <h3>礼拝のご案内</h3>
+                <div class="worship-times">
+                    <h4>集会案内</h4>
+                    <div class="worship-time">
+                        <span><strong>礼拝</strong></span>
+                        <span>日曜日 午前10時15分〜</span>
+                    </div>
+                    <div class="worship-time">
+                        <span><strong>夕礼拝</strong></span>
+                        <span>第2日曜日 午後7時〜</span>
+                    </div>
+                    <div class="worship-time">
+                        <span><strong>祈祷会</strong></span>
+                        <span>木曜日 午後2時〜</span>
+                    </div>
+                </div>
+                <p style="text-align: center; font-size: 1.1rem; color: #8b4513; margin-top: 1rem;">初めての方も歓迎いたします。お気軽にお越しください。</p>
+            </section>
+
+            <section class="section">
+                <h3>アクセス・お問い合わせ</h3>
+                <div class="info-grid">
+                    <div class="info-card">
+                        <h4>所在地</h4>
+                        <p>〒789-1202</p>
+                        <p>高知県高岡郡佐川町乙２１８２－２</p>
+                        <p><strong>電　話：</strong>0889-22-1161</p>
+                        <p><strong>牧　師：</strong>堤　健</p>
+                    </div>
+                    
+                    <div class="info-card">
+                        <h4>交通アクセス</h4>
+                        <p>JR土讃線 佐川駅より徒歩圏内</p>
+                        <p>車でお越しの方は駐車場をご利用いただけます</p>
+                    </div>
+                </div>
+                
+                <div style="margin-top: 2rem; text-align: center;">
+                    <h4 style="color: #8b4513; margin-bottom: 1rem;">地図</h4>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3296.8!2d133.5!3d33.48!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzPCsDI4JzQ4LjAiTiAxMzPCsDMwJzAwLjAiRQ!5e0!3m2!1sja!2sjp!4v1234567890" 
+                           width="100%" height="300" style="border:0; border-radius: 10px; box-shadow: 0 5px 15px rgba(139, 69, 19, 0.2);" 
+                           allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    <p style="margin-top: 0.5rem; font-size: 0.9rem; color: #666;">高知県高岡郡佐川町乙２１８２－２</p>
+                </div>
+            </section>
+
+            <section class="section">
+                <h3>メッセージ</h3>
+                <div class="info-card">
+                    <p>「すべて疲れた人、重荷を負っている人は、わたしのところに来なさい。わたしがあなたがたを休ませてあげよう。」</p>
+                    <p style="text-align: right; margin-top: 1rem;"><em>マタイの福音書 11章28節</em></p>
+                    <br>
+                    <p>佐川教会は、どなたでも心から歓迎いたします。人生に疲れを感じている方、心の平安を求めている方、神様について知りたい方、どのような理由でも構いません。</p>
+                    <p>私たちと共に、神様の愛と恵みを分かち合いませんか。</p>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 佐川教会 All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
